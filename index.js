@@ -11,8 +11,8 @@ var app = express();
 
 var dbOptions = {
       host: 'localhost',
-      user: 'debugger',
-      password: 'passworddd',
+      user: 'root',
+      password: 'codex',
       port: 3306,
       database: 'debugging_tips'
 };
@@ -38,10 +38,10 @@ function errorHandler(err, req, res, next) {
 //setup the handlers
 app.get('/', issues.all);
 app.get('/issues', issues.all);
-app.get('/issues/add' issues.showAdd);
+app.get('/issues/add', issues.showAdd);
 app.get('/issues/:id', issues.get);
 app.post('/issues/update/:id', issues.update);
-app.post('/issuesss', issues.add);
+app.post('/issues/add', issues.add);
 app.get('/issues/delete/:id', issues.delete);
 
 //this should be a post but this is only an illustration of CRUD - not on good practices
