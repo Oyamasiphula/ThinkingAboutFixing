@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 function errorHandler(err, req, res, next) {
-  res.status(500);
+  // res.status(500);
   res.render('error', { error: err });
 }
 
